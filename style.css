@@ -1,0 +1,213 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 13px;
+}
+h2{
+    font-size: 16px;
+}
+.name{
+    font-size: 12px;
+}
+.proffesion{
+    font-size: 10px;
+}
+p{
+    font-size: 12px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 0.25fr 0.25fr 0.25fr 0.25fr;
+  grid-template-rows: 0.5fr 0.5fr;
+  height: 100vh;
+  grid-template-areas:
+    "test-1 test-1 test-2 test-3"
+    "test-4 test-5 test-5 test-3";
+  padding: 4rem 10rem;
+  grid-gap: 25px;
+  background-color: hsl(210, 46%, 95%);
+}
+.test-1 {
+  grid-area: test-1;
+  background-color: hsl(263, 55%, 52%);
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  padding: 10px 30px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+.test-1 svg {
+  position: absolute;
+  right: 15%;
+  top: 0%;
+}
+.test-1 h2,
+.test-1 p,
+.test-1 h3,
+.test-1 h4 {
+  position: relative;
+  z-index: 2;
+}
+.test-2 {
+  grid-area: test-2;
+  background-color: hsl(217, 19%, 35%);
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(56, 40, 40, 0.2);
+  padding: 10px 30px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+.test-3 {
+  grid-area: test-3;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  padding: 10px 30px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+.test-4 {
+  grid-area: test-4;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  padding: 10px 30px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+.test-5 {
+  grid-area: test-5;
+  background-color: hsl(219, 29%, 14%);
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  padding: 10px 30px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.head-text {
+  padding: 0 20px;
+}
+.head img {
+  width: 12%;
+  height: auto;
+  border-radius: 50%;
+}
+.test-1 .head img, .test-2 .head img{
+    border: 2px solid hsl(0, 0%, 81%);
+}
+.test-5 .head img{
+    border: 2px solid hsl(263, 55%, 52%);
+}
+.test-3 .head img, .test-4 .head img{
+    border: none;
+}
+.test-1 .name,
+.test-2 .name,
+.test-5 .name {
+  color: hsl(0, 0%, 81%);
+}
+.test-3 .name,
+.test-4 .name {
+  color: hsl(217, 19%, 35%);
+}
+.test-1 .proffesion,
+.test-2 .proffesion,
+.test-5 .proffesion {
+  color: hsl(0, 0%, 81%);
+  opacity: 50%;
+}
+.test-4 .proffesion,
+.test-3 .proffesion {
+  color: hsl(217, 19%, 35%);
+  opacity: 50%;
+}
+.test-1 h2,
+.test-2 h2,
+.test-5 h2 {
+  color: hsl(0, 0%, 81%);
+}
+.test-3 h2,
+.test-4 h2 {
+  color: hsl(217, 19%, 35%);
+}
+.test-1 p,
+.test-2 p,
+.test-5 p {
+  color: hsl(0, 0%, 81%);
+  opacity: 70%;
+}
+.test-3 p,
+.test-4 p {
+  color: hsl(217, 19%, 35%);
+  opacity: 70%;
+}
+@media screen and (max-width: 1200px) {
+  .grid {
+    grid-template-columns: 0.33fr 0.33fr 0.33fr;
+    grid-template-rows: 0.5fr 0.5fr 0.5fr;
+    height: 150vh;
+    grid-template-areas:
+      "test-1 test-1 test-2"
+      "test-4 test-5 test-5"
+      "test-3 test-3 test-3";
+  }
+}
+@media screen and (max-width: 900px) {
+    .grid {
+      grid-template-columns: 0.5fr 0.5fr;
+      grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr;
+      height: 200vh;
+      grid-template-areas:
+        "test-1 test-1"
+        "test-4 test-2"
+        "test-5 test-5"
+        "test-3 test-3";
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .grid {
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.75fr 0.5fr 0.5fr 0.75fr 1fr;
+      height: 350vh;
+      grid-template-areas:
+        "test-1"
+        "test-2"
+        "test-4"
+        "test-5"
+        "test-3";
+    padding: 3rem 1rem;
+    }
+    h2{
+        font-size: 20px;
+    }
+    .name{
+        font-size: 14px;
+    }
+    .proffesion{
+        font-size: 12px;
+    }
+    p{
+        font-size: 14px;
+    }
+  }
+  
